@@ -16,13 +16,14 @@ html
             spam(class=['mdl-layout-title']) MTG Championships
             div(class=['mdl-layout-spacer'])
             nav(class=['mdl-navigation', 'mdl-layout--large-screen-only'])
-              a(class=['mdl-navigation__link'], href='') Teste
-              a(class=['mdl-navigation__link'], href='') Teste
+              a(class=['mdl-navigation__link'], href='') Tabela
+              a(class=['mdl-navigation__link'], href='') Histórico de Jogos
         div(class=['mdl-layout__drawer'])
           spam(class=['mdl-layout-title']) Menu
           nav(class=['mdl-navigation'])
-            a(class=['mdl-navigation__link'], href='') Teste
-            a(class=['mdl-navigation__link'], href='') Teste
+            a(class=['mdl-navigation__link'], href='') Tabela
+            a(class=['mdl-navigation__link'], href='') Histórico de jogos
         block main
           main(class=['mdl-layout__content'])
-          div(class=['page-content'])
+            div(class=['page-content'])
+            block content

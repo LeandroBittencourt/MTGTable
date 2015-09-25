@@ -1,0 +1,11 @@
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.mdl-textfield {
+  width: 100%;
+}
+#submit{
+  margin-top: 3em;
+}

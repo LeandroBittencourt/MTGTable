@@ -3,7 +3,7 @@ doctype html
 html
   head
     block head
-      title title
+      title #{tittle}
       link(rel='stylesheet', href='/stylesheets/material.min.css',type='text/css')
       link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
       script(src='/javascripts/material.min.js')
@@ -27,3 +27,6 @@ html
           main(class=['mdl-layout__content'])
             div(class=['page-content'])
             block content
+      block footer
+    block scripts
+      script(src='/javascripts/angular.min.js')

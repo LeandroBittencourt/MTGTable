@@ -2,13 +2,17 @@ extends layout
 block append head
   link(rel='stylesheet', href='/stylesheets/newPlayerForm.css', type="text/css")
 block content
-  div(class=['mdl-grid'])
+  div(class=['mdl-grid'] ng-app="newPlayerController")
     div(class=['mdl-cell','mdl-cell--12-col'])
-      form(action="",method="post")
+      form(action="",method="post", ng-controller="submitNewPlayerController")
         div(class=['mdl-textfield','mdl-js-textfield','mdl-textfield--floating-label'])
-          input(class=['mdl-textfield__input'], type="text", id="name")
+          input(class=['mdl-textfield__input'], type="text", id="name", ng-model="formModel.name")
           label(class=['mdl-textfield__label'], for="name") Name
         div(class=['mdl-textfield','mdl-js-textfield','mdl-textfield--floating-label'])
-          input(class=['mdl-textfield__input'], type="text", id="email")
+          input(class=['mdl-textfield__input'], type="text", id="email", ng-model="formModel.email")
           label(class=['mdl-textfield__label'], for="name") Email
         input(class=['mdl-button','mdl-js-button', 'mdl-button--raised', 'mdl-js-ripple-effect'] value="Criar", id="submit")
+        code
+          {{formModel}}
+block append scripts
+  script(src='/javascripts/newPlayerController.js')

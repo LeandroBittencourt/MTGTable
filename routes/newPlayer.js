@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('newPlayer');
+  res.render('newPlayer',{controller:'newPlayerController'});
 });
 
 module.exports = router;
